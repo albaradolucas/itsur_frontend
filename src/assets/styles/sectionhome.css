@@ -1,0 +1,21 @@
+.sec-home {
+	max-width: 992px;
+	margin: auto;
+	width: 100%;
+	padding: 3rem;
+	display: flex;
+	align-items: center;
+}
+.sec-home .home-cta {
+	flex: 1;
+}
+.sec-home .home-cta .home-title {
+	width: 20rem;
+	font-size: 3rem;
+}
+.sec-home .home-cta .home-subtitle {
+	width: 290px;
+}
+.sec-home .home-cta .lead-magnet .input-col {
+	max-width: 300px;
+}

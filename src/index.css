@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 825px) {
+	.sec-onb .intro {
+		text-align: center;
+	}
+	.sec-onb .intro p {
+		font-size: 0.7rem;
+	}
+	.sec-onb .steps {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+	.sec-ft .footer-cta {
+		width: 100%;
+		text-align: center;
+	}
+	.sec-ft .footer-cta .foot-1 {
+		padding-bottom: 2rem;
+	}
+	.sec-benefit .intro {
+		text-align: center;
+	}
+	.sec-benefit .intro h3 {
+		font-size: 1.6rem;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background-color: rgba(255, 180, 82, 0.6156862745);
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #ff9551;
+	border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #ff7800;
+}

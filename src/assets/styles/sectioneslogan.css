@@ -1,0 +1,15 @@
+.sec-eslogan {
+	width: 100%;
+	background-color: #ff7800;
+	color: #fefefe;
+	padding: 4rem;
+}
+.sec-eslogan .kpi {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.sec-eslogan .kpi .eslogan {
+	font-size: 3rem;
+	font-weight: 600;
+}

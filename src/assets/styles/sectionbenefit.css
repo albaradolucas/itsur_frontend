@@ -1,0 +1,87 @@
+.benefit {
+	display: flex;
+	flex-direction: column;
+}
+
+.benefit .icon {
+	color: #ff7800;
+	font-size: 6.5rem;
+	text-align: center;
+}
+
+.benefit .description .title {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.benefit .description .text {
+	color: #888;
+	font-weight: 600;
+	text-align: center;
+}
+
+.benefit .cta {
+	color: #ff7800;
+	margin-top: 3rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.sec-benefit {
+	border-top: 1px solid #d9d9d9;
+	padding-top: 3rem;
+}
+
+.benefit .icon {
+	color: #ff7800;
+	font-size: 6.5rem;
+	text-align: center;
+}
+
+.sec-benefit .intro {
+	text-align: center;
+}
+
+.sec-benefit .intro h3 {
+	font-size: 1.7rem;
+}
+
+.sec-benefit .intro p {
+	color: #888;
+	font-size: 0.8rem;
+}
+
+.sec-benefit .features {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.sec-benefit .features .text {
+	padding: 2rem 0;
+	flex: 1;
+}
+
+.sec-benefit .features .text .feature {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.sec-benefit .features .text .feature .description {
+	margin-left: 1rem;
+	max-width: 20rem;
+}
+
+.sec-benefit .features .text .feature .description .title-fet {
+	font-size: 1.15em;
+}
+
+.sec-benefit .features .text .feature .description .text-fet {
+	font-size: 0.8rem;
+}
+
+.sec-benefit .bnf-cards {
+	width: 100%;
+	padding: 0 1.5rem 1.5rem 1.5rem;
+}

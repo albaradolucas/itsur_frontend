@@ -1,0 +1,36 @@
+.btn-main,
+.btn-main-s {
+	padding: 0.25rem 1rem;
+	border-radius: 0.25rem;
+	background-color: #ff7800;
+	color: #fefefe;
+	border: solid 1px #ff7800;
+	text-decoration: none;
+}
+.btn-main:hover,
+.btn-main-s:hover {
+	background-color: #fff;
+	color: #ff7800;
+}
+.btn-main-s {
+	font-size: 0.75rem;
+	padding: 0.1rem 1rem;
+}
+
+.btn-sec,
+.btn-sec-s {
+	padding: 0.25rem 1rem;
+	border-radius: 0.25rem;
+	color: #1b1c1e;
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+}
+.btn-sec:hover,
+.btn-sec-s:hover {
+	color: #888;
+}
+.btn-sec-s {
+	font-size: 0.75rem;
+	padding: 0.1rem 1rem;
+}

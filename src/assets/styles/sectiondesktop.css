@@ -1,0 +1,54 @@
+.icon-sm i {
+	font-size: 1.25rem;
+	padding: 0.4rem 0.65rem;
+	color: #ff7800;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2509803922);
+}
+
+.sec-desk {
+	max-width: 992px;
+	margin: auto;
+	width: 100%;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.sec-desk .intro {
+	text-align: center;
+}
+.sec-desk .intro h3 {
+	font-size: 1.7rem;
+}
+.sec-desk .intro p {
+	color: #888;
+	font-size: 0.8rem;
+}
+.sec-desk .features {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+.sec-desk .features .text {
+	padding: 2rem 0;
+	flex: 1;
+}
+.sec-desk .features .text .feature {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.sec-desk .features .text .feature .description {
+	margin-left: 1rem;
+	max-width: 20rem;
+}
+.sec-desk .features .text .feature .description .title-fet {
+	font-size: 1.15em;
+}
+.sec-desk .features .text .feature .description .text-fet {
+	font-size: 0.8rem;
+}
+.sec-desk .features .image img {
+	max-width: 25rem;
+}

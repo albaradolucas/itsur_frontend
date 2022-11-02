@@ -1,0 +1,17 @@
+.sec-ft {
+    border-top: 2px solid #ff7800;
+    /* text-align: center; */
+    padding: 6.5rem;
+}
+.sec-ft .footer-cta .cta-title {
+    font-size: 2rem;
+}
+.sec-ft .footer-cta .cta-desc {
+    font-size: 0.8rem;
+}
+.sec-ft .ft-words {
+    color: #888;
+    position: relative;
+    top: 65px;
+    text-align: center;
+}
