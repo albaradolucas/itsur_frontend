@@ -2,13 +2,20 @@
 import "../../assets/styles/button.css";
 import "../../assets/styles/header.css";
 import "../../assets/styles/footer.css";
+import "../../assets/styles/sectionbenefit.css";
 
-import Carrusel from "../../components/Carrusel";
+import SectionJob from "../../components/sectionHS/SectionJob";
+import SectionComunication from "../../components/sectionHS/SectionComunication";
+import SectionServidores from "../../components/sectionHS/SectionServidores";
+import SectionHSBenefit from "../../components/sectionHS/SectionHSBenefit";
 
 const HardSoft = () => {
 	return (
 		<>
-			<Carrusel/>
+			<SectionJob/>
+			<SectionComunication/>
+			<SectionServidores/>
+			<SectionHSBenefit/>
 		</>
 	);
 };
