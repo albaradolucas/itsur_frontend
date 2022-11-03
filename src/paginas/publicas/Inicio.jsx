@@ -10,31 +10,24 @@ import "../../assets/styles/sectioneslogan.css";
 import "../../assets/styles/sectiononb.css";
 
 // Components
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import SectionHome from "../../components/sections/SectionHome";
-import SectionDesktop from "../../components/sections/SectionDesktop";
-import SectionMobile from "../../components/sections/SectionMobile";
-import SectionBenefit from "../../components/sections/SectionBenefit";
-import SectionEslogan from "../../components/sections/SectionEslogan";
-import SectionOnb from "../../components/sections/SectionOnb";
+import SectionHome from "../../components/sectionsInicio/SectionHome";
+import SectionDesktop from "../../components/sectionsInicio/SectionDesktop";
+import SectionMobile from "../../components/sectionsInicio/SectionMobile";
+import SectionBenefit from "../../components/sectionsInicio/SectionBenefit";
+import SectionEslogan from "../../components/sectionsInicio/SectionEslogan";
+import SectionOnb from "../../components/sectionsInicio/SectionOnb";
 
 const Inicio = () => {
-
-    return (
-        <>
-            <Header/>
-            <div>
-                <SectionHome/>
-                <SectionDesktop/>
-                <SectionMobile/>
-                <SectionBenefit/>
-                <SectionEslogan/>
-                <SectionOnb/>
-            </div>
-            <Footer/>
-        </>
-    )
-}
+	return (
+		<>
+			<SectionHome />
+			<SectionDesktop />
+			<SectionMobile />
+			<SectionBenefit />
+			<SectionEslogan />
+			<SectionOnb />
+		</>
+	);
+};
 
 export default Inicio;

@@ -14,7 +14,7 @@ const SectionHome = () => {
 	const [email, setEmail] = useState("");
 	const [alerta, setAlerta] = useState({});
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		if ([email].includes("")) {
