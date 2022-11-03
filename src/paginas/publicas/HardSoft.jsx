@@ -1,9 +1,14 @@
+// Styles
+import "../../assets/styles/button.css";
+import "../../assets/styles/header.css";
+import "../../assets/styles/footer.css";
+
+import Carrusel from "../../components/Carrusel";
+
 const HardSoft = () => {
 	return (
 		<>
-			<p>
-				Hardware y Software
-			</p>
+			<Carrusel/>
 		</>
 	);
 };

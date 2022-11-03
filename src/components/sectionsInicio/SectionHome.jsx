@@ -1,31 +1,36 @@
 // Libraries
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import swal from "@sweetalert/with-react";
 
 // Images
 import home from "../../assets/img/home.png";
 
 // components
-import Alerta from "../Alerta";
+// import Alerta from "../Alerta";
 
 const SectionHome = () => {
 	const navigate = useNavigate();
 
 	const [email, setEmail] = useState("");
-	const [alerta, setAlerta] = useState({});
+	// const [alerta, setAlerta] = useState({});
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		if ([email].includes("")) {
-            setAlerta({ msg: "Debes ingresar tu email", error: true });
+            // setAlerta({ msg: "Debes ingresar tu email", error: true });
+			swal({
+				title: "Email Inválido!",
+				text: "Debes ingresar tu email",
+				icon: "error",
+				button: "Entendido!"
+			})
             return;
         }
 
 		navigate("/contacto");
 	}
-
-	const { msg } = alerta;
 
 	return (
 		<section className="sec-home">
@@ -57,7 +62,6 @@ const SectionHome = () => {
 						</div>
 					</div>
 				</form>
-				{msg && <Alerta alerta={alerta} />}
 			</div>
 			<div className="home-img d-none d-md-block">
 				<img src={home} alt="desktop" />
