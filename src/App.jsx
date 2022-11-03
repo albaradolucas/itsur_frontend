@@ -10,6 +10,9 @@ import Productos from "./paginas/publicas/Productos";
 import HardSoft from "./paginas/publicas/HardSoft";
 import PostVenta from "./paginas/publicas/PostVenta";
 import Contacto from "./paginas/publicas/Contacto";
+import Registrar from "./paginas/publicas/Registrar";
+import IniciarSesion from "./paginas/publicas/IniciarSesion";
+import OlvidePassword from "./paginas/publicas/OlvidePassword";
 
 function App() {
 	return (
@@ -22,6 +25,9 @@ function App() {
 					<Route path="hardsoft" element={<HardSoft />} />
 					<Route path="post_venta" element={<PostVenta />} />
 					<Route path="contacto" element={<Contacto />} />
+					<Route path="registrar" element={<Registrar />} />
+					<Route path="login" element={<IniciarSesion />} /> 
+					<Route path="olvide-password" element={<OlvidePassword />} /> 
 				</Route>
 			</Routes>
 		</BrowserRouter>
