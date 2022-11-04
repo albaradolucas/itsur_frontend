@@ -13,8 +13,8 @@ const SectionHome = () => {
 
 	return (
 		<section className="sec-home mt-11 mb-32">
-			<div className="home-cta row">
-                <div className="col-8">
+			<div>
+                <div className="col-lg-8">
                     <h2 className="font-bold text-4xl">Fintech - Nahuel</h2>
                     <p className="product-subtitle text-base">
                         Sistemas de gestión de negocios para entidades financieras
@@ -28,8 +28,8 @@ const SectionHome = () => {
                     </div>
                 </div>
 			</div>
-			<div className="col-4 md-none d-md-block">
-				<img src={mobile} alt="desktop" />
+			<div className="col-md-4">
+				<img className="home-img d-none d-md-block" src={mobile} alt="desktop" />
 			</div>
 		</section>
 	);

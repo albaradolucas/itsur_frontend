@@ -8,10 +8,10 @@ import SectionFintech from "../../components/sectionPostVenta/SectionFintech";
 
 const PostVenta = () => {
 	return (
-        <>
+        <div className="flex flex-col justify-center items-center">
             <SectionAssist/>
             <SectionFintech/>
-        </>
+        </div>
     )
 };
 

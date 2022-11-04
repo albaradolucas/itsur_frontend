@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @media (max-width: 825px) {
+	.comunication {
+		text-align: center;
+	}
 	.sec-onb .intro {
 		text-align: center;
 	}

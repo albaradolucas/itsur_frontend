@@ -3,9 +3,9 @@ import oficina from "../../assets/img/oficina.jpg";
 const SectionJob = () => {
 	return (
 		<>
-			<section className="sec-home">
+			<section className="sec-home comunication">
 				<div className="home-cta">
-					<h2 className="text-4xl">Puestos de Trabajo</h2>
+					<h2 className="md:text-4xl text-2xl">Puestos de Trabajo</h2>
 					<p className="text-base">
 						La productividad de una empresa radica en su personal.
 						Realizamos una evaluación de cada puesto de trabajo y

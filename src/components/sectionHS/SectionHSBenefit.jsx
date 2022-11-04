@@ -1,8 +1,8 @@
 const SectionHSBenefit = () => {
 	return (
-		<section className="sec-benefit">
+		<section className="sec-benefit comunication">
 			<div className="intro">
-				<h3>Infraestructura y soporte técnico</h3>
+				<h3 className="md:p-0 p-2 leading-6 text-xs">Infraestructura y soporte técnico</h3>
 				<p>Aquí hay algunas razones por las que debe elegir ITsur</p>
 			</div>
 			<div className="bnf-cards row ms-0">

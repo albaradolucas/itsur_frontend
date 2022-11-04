@@ -47,7 +47,7 @@ const SectionHome = () => {
 						<div className="col input-col">
 							<input
 								type="email"
-								className="form-control"
+								className="md:w-auto border-gray-400 border rounded-md p-2 md:mb-0 mb-2 w-[300px]"
 								name="email"
 								id="email"
 								value={email}
@@ -56,7 +56,7 @@ const SectionHome = () => {
 							/>
 						</div>
 						<div className="col">
-							<button className="btn-main">
+							<button className="btn-main md:w-auto w-[300px]">
 								Comenzar
 							</button>
 						</div>

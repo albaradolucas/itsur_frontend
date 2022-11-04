@@ -48,13 +48,13 @@ const Registrar = () => {
 			await clienteAxios.post("/registrar", { nombre, email, password });
 			swal({
 				title: "Usuario creado",
-				text: "Revisa tu email! Te hemos enviado instrucciones para que sigas",
+				text: "Revisa tu email! Te hemos enviado instrucciones.",
 				icon: "success",
 				button: "OK!",
 			});
 		} catch (error) {
 			swal({
-				text: error.response,
+				text: "Usuario ya registrado",
 				icon: "error",
 				button: "Entendido!",
 			});

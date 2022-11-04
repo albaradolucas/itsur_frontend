@@ -1,16 +1,15 @@
 import { useState } from "react";
 import swal from "@sweetalert/with-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import clienteAxios from "../../config/axios";
-import { HiOutlineMenu } from 'react-icons/hi';
-import { RiCloseLine } from "react-icons/ri";
-
 
 const IniciarSesion = () => {
 
 	// States
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	
+	const navigate = useNavigate()
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -37,10 +36,13 @@ const IniciarSesion = () => {
 
 		// Crear el usuario en la api
 		try {
-			await clienteAxios.post("/registrar", { nombre, email, password });
+			const {data} = await clienteAxios.post("/login", { email, password });
+
+			localStorage.setItem("its_token", data.token)
+			navigate('/')
 			swal({
-				title: "Usuario creado",
-				text: "Revisa tu email! Te hemos enviado instrucciones para que sigas",
+				title: "Bienvenido de Nuevo!",
+				text: "Sesión iniciada, disfruta tu estadía",
 				icon: "success",
 				button: "OK!",
 			});
@@ -92,7 +94,7 @@ const IniciarSesion = () => {
 						</div>
 						<input
 							type="submit"
-							value="Crear Cuenta"
+							value="Iniciar Sesión"
 							className="bg-orange-400 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-2 hover:cursor-pointer hover:bg-orange-600 md:w-auto"
 						/>
 					</form>

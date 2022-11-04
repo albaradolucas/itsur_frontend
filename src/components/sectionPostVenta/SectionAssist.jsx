@@ -6,9 +6,9 @@ import assist from "../../assets/img/assist.jpg";
 
 const SectionAssist = () => {
 	return (
-		<section className="sec-home">
+		<section className="sec-home container-fluid">
 			<div className="home-cta row">
-                <div className="col-8">
+                <div className="col-md-8">
                     <h2 className="font-bold text-4xl">Asistencia Técnica</h2>
                     <p className="product-subtitle text-base">
                         ¿Necesitas asistencia relacionada con puestos de trabajo, servidores o infraestructura?
@@ -22,7 +22,7 @@ const SectionAssist = () => {
                     </div>
                 </div>
 			</div>
-			<div className="col-5 md-none d-md-block">
+			<div className="col-md-5 d-none d-md-block">
 				<img className="rounded" src={assist} alt="desktop" />
 			</div>
 		</section>

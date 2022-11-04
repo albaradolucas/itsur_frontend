@@ -26,7 +26,7 @@ const SectionForm = () => {
 
 	return (
 		<>
-			<main className="container mx-auto md:grid md:grid-cols-2 gap-10 p-5 items-center">
+			<main className="container mx-auto md:grid md:grid-cols-2 p-3 mb-3 items-center">
 				<div>
 					<h1 className="text-orange-400 font-black text-4xl">
 						Llene el formulario con su pregunta {""}
@@ -35,12 +35,11 @@ const SectionForm = () => {
 						</span>
 					</h1>
 				</div>
-				<div>
+				<div className="mt-10 md:mt-5 shadow-lg md:ml-3 px-3 py-1 rounded-xl bg-white">
 					<form
-						className="bg-white py-10 px-5 mb-10 lg:mb-5 shadow-md rounded-md"
 						onSubmit={handleSubmit}
 					>
-						<div className="my-1">
+						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">
 								Nombre:
 							</label>
@@ -52,7 +51,7 @@ const SectionForm = () => {
 								onChange={(e) => setNombre(e.target.value)}
 							/>
 						</div>
-						<div className="my-3">
+						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">
 								Email:
 							</label>
@@ -64,7 +63,7 @@ const SectionForm = () => {
 								onChange={(e) => setEmail(e.target.value)}
 							/>
 						</div>
-						<div className="my-3">
+						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">
 								Número:
 							</label>
@@ -76,7 +75,7 @@ const SectionForm = () => {
 								onChange={(e) => setNumero(e.target.value)}
 							/>
 						</div>
-						<div className="my-3">
+						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">
 								Compañia:
 							</label>
@@ -88,7 +87,7 @@ const SectionForm = () => {
 								onChange={(e) => setCompañia(e.target.value)}
 							/>
 						</div>
-						<div className="my-3">
+						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">
 								Asunto:
 							</label>
@@ -100,7 +99,7 @@ const SectionForm = () => {
 								onChange={(e) => setAsunto(e.target.value)}
 							/>
 						</div>
-						<div className="my-1">
+						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">
 								Consulta:
 							</label>
@@ -113,7 +112,7 @@ const SectionForm = () => {
 						</div>
 						<input
 							type="submit"
-							className="bg-orange-400 text-white font-bold p-3 rounded w-full hover:bg-orange-600 cursor-pointer transition-colors"
+							className="bg-orange-400 w-full py-3 px-10 rounded-xl text-white uppercase font-bold hover:bg-orange-600 md:w-auto cursor-pointer transition-colors mb-3"
 						/>
 					</form>
 				</div>

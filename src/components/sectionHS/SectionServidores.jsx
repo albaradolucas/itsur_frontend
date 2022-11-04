@@ -3,9 +3,9 @@ import server from "../../assets/img/server.jpg";
 const SectionServidores = () => {
 	return (
 		<>
-			<section className="sec-home">
+			<section className="sec-home comunication">
 				<div className="home-cta">
-					<h2 className="text-4xl">Infraestructura de servidores</h2>
+					<h2 className="md:text-4xl text-2xl">Infraestructura de servidores</h2>
 					<p className="text-base">
 						Las empresas modernas requieren una infraestructura de base acorde con sus necesidades tecnológicas. Confeccionamos un plan de mejoras e inversiones que permitan atender los requerimientos actuales y proveer la posibilidad de proyectar un crecimiento futuro, así como también procedimientos para diseñar su plan de contingencias y recuperación de desastres informáticos
 					</p>
