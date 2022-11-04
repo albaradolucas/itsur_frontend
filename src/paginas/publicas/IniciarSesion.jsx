@@ -2,14 +2,18 @@ import { useState } from "react";
 import swal from "@sweetalert/with-react";
 import { Link, useNavigate } from "react-router-dom";
 import clienteAxios from "../../config/axios";
+import useAuth from "../../hooks/useAuth";
+import Alerta from "../../components/Alerta";
 
 const IniciarSesion = () => {
+	const { setAuth } = useAuth();
 
 	// States
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	
-	const navigate = useNavigate()
+	const [alerta, setAlerta] = useState({});
+
+	const navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -24,22 +28,16 @@ const IniciarSesion = () => {
 			return;
 		}
 
-		if (password.length < 6) {
-			swal({
-				title: "Contraseña muy corta!",
-				text: "Agrega al mínimo 6 caracteres",
-				icon: "error",
-				button: "Entendido!",
-			});
-			return;
-		}
-
 		// Crear el usuario en la api
 		try {
-			const {data} = await clienteAxios.post("/login", { email, password });
+			const { data } = await clienteAxios.post("/login", {
+				email,
+				password,
+			});
 
-			localStorage.setItem("its_token", data.token)
-			navigate('/')
+			sessionStorage.setItem("its_token", data.token);
+			setAuth(data);
+			navigate("/");
 			swal({
 				title: "Bienvenido de Nuevo!",
 				text: "Sesión iniciada, disfruta tu estadía",
@@ -47,13 +45,11 @@ const IniciarSesion = () => {
 				button: "OK!",
 			});
 		} catch (error) {
-			swal({
-				text: error.response,
-				icon: "error",
-				button: "Entendido!",
-			});
+			setAlerta({ msg: error.response.data.msg, error: true });
 		}
 	};
+
+	const { msg } = alerta;
 
 	return (
 		<>
@@ -67,6 +63,7 @@ const IniciarSesion = () => {
 					</h1>
 				</div>
 				<div className="mt-10 md:mt-5 shadow-lg px-3 py-1 rounded-xl bg-white">
+					{msg && <Alerta alerta={alerta} />}
 					<form onSubmit={handleSubmit}>
 						<div className="my-5">
 							<label className="uppercase text-gray-600 block text-xl font-bold">

@@ -1,6 +1,8 @@
 // libraries
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import useAuth from "../hooks/useAuth";
+
 // images
 import logoit from "../assets/img/logoit.png";
 
@@ -25,6 +27,8 @@ const NavLinks = () => (
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+	const { auth, cerrarSesion } = useAuth();
+
 	return (
 		<>
 			<header>
@@ -38,12 +42,18 @@ const Header = () => {
 						<NavLinks />
 					</div>
 					<nav className="gtsd d-none d-md-block">
-						<Link to="/registrar" className="btn-sec-s">
-							Registrarse
-						</Link>
-						<Link to="/login" className="btn-main-s">
-							Iniciar Sesión
-						</Link>
+						{auth?._id ? (
+							<>
+								<Link onClick={cerrarSesion} to="/login" className="btn-main-s">
+									Cerrar Sesión
+								</Link>
+							</>
+						) : (
+							<>
+								<Link to="/registrar" className="btn-sec-s">Registrarse</Link>
+								<Link to="/login" className="btn-main-s">Iniciar Sesión</Link>
+							</>
+						)}
 					</nav>
 				</div>
 				<div className="absolute md:hidden block top-6 right-6">

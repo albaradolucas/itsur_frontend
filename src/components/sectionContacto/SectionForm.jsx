@@ -1,7 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useAuth from '../../hooks/useAuth'
 import swal from "@sweetalert/with-react";
 
 const SectionForm = () => {
+
+	const {auth} = useAuth()
+	const [formulario, setFormulario] = useState([]);
+
+	useEffect(() => {
+		setFormulario(auth)
+	}, [auth])
+
 	// States
 	const [nombre, setNombre] = useState("");
 	const [email, setEmail] = useState("");
@@ -59,8 +68,11 @@ const SectionForm = () => {
 								type="email"
 								placeholder="¿Cuál es tu email?"
 								className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								value={formulario.email || ''}
+								onChange={e => setFormulario({
+                                    ...formulario,
+                                    [e.target.name] : e.target.value
+                                })}
 							/>
 						</div>
 						<div className="my-5">
